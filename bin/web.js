@@ -3,9 +3,13 @@ var uuid = require('uuid');
 var basicAuth = require('basic-auth');
 var Analytics = require('analytics-node');
 var nuts = require('../');
+var env = require('dotenv').config()
+
 
 var app = express();
 
+// var s = process.env;
+console.debug(process.env);
 var apiAuth =  {
     username: process.env.API_USERNAME,
     password: process.env.API_PASSWORD
